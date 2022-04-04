@@ -1,236 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
-/* Custom properties */
-
-:root {
-  /* Colors */
-  --clr-white: #fff;
-  --clr-light: #fffeca;
-  --clr-dark: #545862;
-  --clr-text-gray: rgb(182, 181, 181);
-
-  /* font-families */
-  --ff-sans: 'Open Sans', sans-serif;
-}
-
-/* RESET */
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default link style */
-a {
-  color: unset;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul,
-ol {
-  list-style: none;
+* {
   margin: 0;
   padding: 0;
 }
 
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  font-family: var(--ff-sans);
-  background-color: var(--clr-body-bg);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #ebc49e;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove default button styles */
-button,
-input[type='submit'],
-input[type='reset'] {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Utility classes */
-
-.flex {
-  display: flex;
-  gap: var(--gap, 1rem);
-}
-
-.grid {
-  display: grid;
-  gap: var(--gap, 1rem);
-}
-
-.column {
-  flex-direction: column !important;
-}
-
-.nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: var(--gap, 1rem);
-  list-style: none;
-  font-family: var(--ff-sans);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  text-align: center;
-  color: var(--clr-text-secondary);
-}
-
-.btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.container {
-  width: fit-content;
-  align-items: center;
-  justify-content: center;
-  background: var(--clr-white);
-  box-shadow: 0 15px 39px -8px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0 15px 39px -8px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0 15px 39px -8px rgba(0, 0, 0, 0.35);
-  padding: 1.25rem;
+/* The  Form section */
+.form-section {
+  height: 80vh;
+  width: 500px;
+  overflow: hidden;
   margin: 0 auto;
 }
 
-.active {
-  background: var(--clr-light);
+ul {
+  list-style: none;
 }
 
-.container__header {
+/* Form-section */
+.form-control {
+  margin: 3rem auto 0;
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 2px 2px darkgray;
+}
+
+.header-wrap {
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  width: 100%;
+}
+
+.heading {
+  padding: 1rem;
+  color: red;
+}
+
+/* The  Form input section */
+.form-input {
+  padding: 1rem 1rem 0.5rem;
+  display: flex;
+  column-gap: 1rem;
   align-items: center;
-  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
 }
 
-.container__header h1 {
-  font-size: 1.25rem;
-  font-weight: 500;
+.add {
+  border: none;
+  background-color: inherit;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888;
 }
 
-.btn > svg {
-  width: 1.25rem;
+.syc {
+  padding: 1rem;
+  color: #888;
 }
 
-.container__inputs {
-  width: 100%;
+.syc:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.add:hover {
+  color: purple;
+}
+
+/* checkbox section */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.div1 {
+  padding: 1rem 1rem 0.5rem;
+  display: flex;
+  column-gap: 1rem;
   align-items: center;
+  border-bottom: 1px solid #ddd;
 }
 
-.container__inputs > input {
-  border: 0;
+.dot {
+  cursor: move;
+  color: #888;
+}
+
+.check {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: blue;
+}
+
+.label {
   width: 100%;
-  padding: 0.5rem;
+}
+
+.italics {
+  border: none;
+  background-color: inherit;
+}
+
+.italics:focus {
+  outline: none;
+  border: none;
+  background-color: inherit;
+}
+
+.italics:placeholder-shown {
   font-style: italic;
+  font-size: 20px;
 }
 
-.container__inputs > input::placeholder {
-  color: var(--clr-text-gray);
-  font-weight: 400;
-}
-
-.list__item {
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  gap: 1rem;
-}
-
-.nav--list > li {
-  width: 100%;
-}
-
-.list__item p {
-  width: 100%;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: start;
-}
-
+/* clear section */
 .clear {
-  border-top: 1px solid #ccc;
-  width: 100%;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f4f4f4;
 }
 
-.clear button {
-  width: 100%;
-  color: var(--clr-text-gray);
+.clear a {
+  color: #666;
+  text-decoration: none;
+}
+
+.clear a:hover {
+  text-decoration: underline;
 }
