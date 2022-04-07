@@ -2,58 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do list</title>
-  </head>
+    <meta name="description" content="To-do App" />
+    <meta name="title" property="og:title" content="To-do App" />
+    <meta property="og:type" content="Website" />
+    <meta
+      name="image"
+      property="og:image"
+      content="https://live.staticflickr.com/65535/51565002297_5748ffbdff_b.jpg"
+    />
+    <meta name="author" content="Juliana Ifionu" />
 
+    <title>To-do App</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
   <body>
-    <main>
-      <div class="container flex column">
-        <div class="container__header flex">
-          <h1>Today's To Do</h1>
-          <button type="button" class="btn btn--icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              version="1.1"
-              viewBox="0 0 512 512"
-              enable-background="new 0 0 512 512"
-            >
-              <g>
-                <g>
-                  <path
-                    d="m404.5,62.6l24.8-3.1c11.1-1.4 19-11.5 17.7-22.7-1.3-10.3-9.7-18.7-22.7-17.7l-74.6,9.3c-11.1,1.4-19,11.5-17.7,22.6l9.2,75.6c1.4,11.1 11.5,19.1 22.6,17.7 11.1-1.4 19.1-11.5 17.7-22.7l-3.4-28.1c70.1,52 99.2,142.2 72.3,225.7-26.9,83.5-105.9,140.8-193.2,141-12.9,0-21.1,8.6-21.4,19.8-0.2,11.2 7.8,20.8 21.4,20.8 104.8,0 199.7-68.9 231.9-169.2 32-99.1-2-206.4-84.6-269v-2.13163e-14z"
-                  />
-                  <path
-                    d="m170.7,385.3c-1.4-11.1-11.5-19.1-22.6-17.7-11.1,1.4-19.1,11.5-17.7,22.7l3.4,28.1c-70.1-52-99.2-142.2-72.3-225.7 26.9-83.5 105.9-140.8 193.2-141 12.9,0 21.1-8.6 21.4-19.8 0.2-11.2-7.8-20.8-21.4-20.8-104.7-0.1-199.6,68.8-231.8,169.1-32,99.3 2,206.6 84.6,269.2l-24.8,3.1c-11.1,1.4-19,11.5-17.7,22.7 1.3,10.3 9.7,18.7 22.7,17.7l74.6-9.3c11.1-1.4 19-11.5 17.7-22.6l-9.3-75.7z"
-                  />
-                </g>
-              </g>
-            </svg>
-          </button>
+    <section class="form-section">
+      <form id="form" class="form-control">
+        <div class="header-wrap">
+          <h3 class="heading">ToDo App</h3>
+          <span class="syc"><i class="fas fa-sync"></i></span>
         </div>
-        <div class="container__inputs flex">
-          <input type="text" placeholder="Add your list..." />
-          <button type="button" class="btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24px"
-              height="24px"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,6a1,1,0,0,0-1,1v4a1,1,0,0,1-1,1H7.41l1.3-1.29A1,1,0,0,0,7.29,9.29l-3,3a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l3,3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L7.41,14H17a3,3,0,0,0,3-3V7A1,1,0,0,0,19,6Z"
-              />
-            </svg>
-          </button>
+        <div class="form-input">
+          <input
+            type="text"
+            name="text"
+            id="text"
+            placeholder="Add to your list..."
+            class="italics"
+          />
+          <button type="submit" class="add">+</button>
         </div>
-        <ul class="nav nav--list"></ul>
+
+        <ul class="container"></ul>
         <div class="clear">
-          <button type="button" class="btn">Clear all completed</button>
+          <a href="#">Clear all completed task</a>
         </div>
-      </div>
-    </main>
-    <script src=".src/index.js"></script>
+      </form>
+    </section>
   </body>
 </html>
