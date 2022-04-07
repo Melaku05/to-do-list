@@ -1,6 +1,7 @@
 import trashTask from './src/trashTask.js';
 import addNewTask from './src/addlist.js';
 import { getStorage, saveStorage } from './src/storage.js';
+
 jest.mock('./src/storage.js');
 jest.mock('./src/populateList.js');
 const newTodoInput = document.createElement('input');
